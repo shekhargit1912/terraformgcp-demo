@@ -10,8 +10,6 @@ module "networking" {
   region      = var.region
   subnets = {
     chile   = "10.1.0.0/24"
-    peru    = "10.2.0.0/24"
-    ecuador = "10.3.0.0/24"
   }
 }
 
@@ -32,8 +30,8 @@ module "compute" {
     }
     app-vm-2 = {
       machine_type = "e2-medium"
-      zone         = "${var.region}-b"
-      subnet_key   = "peru"
+      zone         = "${var.region}-a"
+      subnet_key   = "Chile"
     }
   }
 }

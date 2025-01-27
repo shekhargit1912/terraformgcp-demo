@@ -14,7 +14,7 @@ provider "google" {
 
 # VPC Network
 resource "google_compute_network" "vpc" {
-  name                    = "latam-vpc"
+  name                    = "gsm-stage-vpc"
   auto_create_subnetworks = false
 }
 
@@ -56,7 +56,7 @@ resource "google_compute_firewall" "allow_rdp" {
   }
 
   source_ranges = ["0.0.0.0/0"]
-  target_tags   = ["jumpbox"]
+  target_tags   = ["jumpbox-ubuntu"]
 }
 
 # Jumpbox Instance
@@ -69,7 +69,7 @@ resource "google_compute_instance" "jumpbox" {
 
   boot_disk {
     initialize_params {
-      image = "windows-cloud/windows-2019"
+      image = "Ubuntu/Ubuntu 24.04 LTS"
     }
   }
 

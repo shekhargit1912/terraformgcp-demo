@@ -6,7 +6,7 @@ resource "google_compute_instance" "app_vms" {
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-11"
+      image = "Ubuntu/Ubuntu 24.04 LTS"
     }
   }
 
@@ -24,7 +24,7 @@ resource "google_compute_instance" "jumpbox" {
 
   boot_disk {
     initialize_params {
-      image = "windows-cloud/windows-2019"
+      image = "Ubuntu/Ubuntu 24.04 LTS"
     }
   }
 
