@@ -1,6 +1,7 @@
 provider "google" {
   project = var.project_id
   region  = var.region
+  credentials = file("/home/ubuntu/terraformgcp-demo/environments/stage/creds.json")
 }
 
 module "networking" {
