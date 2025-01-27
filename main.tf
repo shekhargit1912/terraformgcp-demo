@@ -26,20 +26,6 @@ resource "google_compute_subnetwork" "chile_subnet" {
   region        = "southamerica-west1"
 }
 
-resource "google_compute_subnetwork" "peru_subnet" {
-  name          = "peru-subnet"
-  ip_cidr_range = "10.2.0.0/24"
-  network       = google_compute_network.vpc.id
-  region        = "southamerica-west1"
-}
-
-resource "google_compute_subnetwork" "ecuador_subnet" {
-  name          = "ecuador-subnet"
-  ip_cidr_range = "10.3.0.0/24"
-  network       = google_compute_network.vpc.id
-  region        = "southamerica-west1"
-}
-
 # Firewall Rules
 resource "google_compute_firewall" "allow_internal" {
   name    = "allow-internal"
