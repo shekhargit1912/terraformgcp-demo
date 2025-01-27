@@ -11,6 +11,9 @@ variable "vpc_name" {
 variable "subnet_ids" {
   description = "Map of subnet names to subnet IDs"
   type        = map(string)
+  default = {
+     chile = "subnet-id-for-chile"
+  }
 }
 
 variable "instances" {
